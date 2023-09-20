@@ -1,4 +1,6 @@
 :root {
+  --sheet-green: rgb(55, 127, 70);
+
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -14,39 +16,21 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  margin: 0px;
+}
+
 .container {
   margin: 0;
-  padding-top: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  width: max-content
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: 0.75s;
-}
-
-.logo.tauri:hover {
-  filter: drop-shadow(0 0 2em #24c8db);
-}
-
 .row {
   display: flex;
   justify-content: center;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
 }
 
 h1 {
@@ -69,14 +53,6 @@ button {
 
 button {
   cursor: pointer;
-}
-
-button:hover {
-  border-color: #396cd8;
-}
-button:active {
-  border-color: #396cd8;
-  background-color: #e8e8e8;
 }
 
 input,
@@ -103,7 +79,55 @@ button {
     color: #ffffff;
     background-color: #0f0f0f98;
   }
-  button:active {
-    background-color: #0f0f0f69;
-  }
+}
+
+/* ----------------------------------------------- */
+
+.header {
+  width: 100vw;
+  height: 60px;
+  border-bottom-left-radius: 5px; 
+  border-bottom-right-radius: 5px; 
+  background-color: rgb(55, 127, 70);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  left: 0;
+}
+.header-section {
+  height: 100%;
+  margin: 0px 15px 0px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+table thead th {
+  padding: 3px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #2f2f2f;
+}
+table thead th:first-child,
+table tr td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: #2f2f2f;
+  width: 25px;
+  font-weight: bold;
+}
+button {
+  border: solid 3px;
+  background-color: white;
+  color: var(--sheet-green);
+  font-weight: bold;
+}
+.cell-container input {
+  background-color: white;
+  border: solid 1px #2f2f2f;
+  border-radius: unset;
+  color: #2f2f2f;
 }
