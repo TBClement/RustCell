@@ -19,7 +19,7 @@ function App() {
       {/* Header with example of calling a rust function from front end */}
       <Header greetFn={greet}/>
       <p>{greetMsg}</p>
-      <SheetTable width={100}/>
+      <SheetTable />
     </div>
   );
 }
