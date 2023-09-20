@@ -2,6 +2,7 @@ import { useState } from "react";
 import { invoke } from "@tauri-apps/api/tauri";
 
 import Header from "./components/Header";
+import SheetTable from "./components/SheetTable";
 
 import "./App.css";
 
@@ -18,6 +19,7 @@ function App() {
       {/* Header with example of calling a rust function from front end */}
       <Header greetFn={greet}/>
       <p>{greetMsg}</p>
+      <SheetTable width={100}/>
     </div>
   );
 }

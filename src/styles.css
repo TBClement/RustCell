@@ -26,6 +26,7 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  width: max-content
 }
 
 .logo {
@@ -105,7 +106,7 @@ button {
 /* ----------------------------------------------- */
 
 .header {
-  width: 100%;
+  width: 100vw;
   height: 60px;
   border-bottom-left-radius: 5px; 
   border-bottom-right-radius: 5px; 
@@ -114,8 +115,9 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  left: 0;
 }
-
 .header-section {
   height: 100%;
   margin: 0px 15px 0px 15px;
@@ -123,10 +125,31 @@ button {
   justify-content: center;
   align-items: center;
 }
-
+table thead th {
+  padding: 3px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #2f2f2f;
+}
+table thead th:first-child,
+table tr td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: #2f2f2f;
+  width: 25px;
+  font-weight: bold;
+}
 button {
   border: solid 3px;
   background-color: white;
   color: var(--sheet-green);
   font-weight: bold;
+}
+.cell-container input {
+  background-color: white;
+  border: solid 1px #2f2f2f;
+  border-radius: unset;
+  color: #2f2f2f;
 }
